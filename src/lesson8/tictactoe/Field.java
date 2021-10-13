@@ -24,16 +24,17 @@ public class Field {
     public void showField() {
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
-                switch (field[i][j]) {
-                    case EMPTY:
-                        System.out.print("_ ");
-                        break;
-                    case CROSS:
-                        System.out.print("X ");
-                        break;
-                    case ZERO:
-                        System.out.print("0 ");
-                }
+                System.out.print(field[i][j].getSign() + " ");
+//                switch (field[i][j]) {
+//                    case EMPTY:
+//                        System.out.print("_ ");
+//                        break;
+//                    case CROSS:
+//                        System.out.print("X ");
+//                        break;
+//                    case ZERO:
+//                        System.out.print("0 ");
+//                }
             }
             System.out.println();
         }

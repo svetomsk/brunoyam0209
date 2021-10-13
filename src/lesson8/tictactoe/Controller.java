@@ -4,15 +4,14 @@ import java.awt.*;
 
 public class Controller {
     public void startGame() {
-        Player cross = new Player(Cell.CROSS);
-        Player zero = new Player(Cell.ZERO);
+        Player cross = new ComputerPlayer(Cell.CROSS);
+        Player zero = new ComputerPlayer(Cell.ZERO);
         Field field = new Field();
 
         Player currentPlayer = cross;
-
         while(true) {
-            field.showField();
-            Point coords = currentPlayer.turn();
+            Point coords = currentPlayer.turn(field);
+
             if (!field.setValue(coords.x, coords.y, currentPlayer.getTeam())) {
                 System.out.println("Try again");
                 continue;

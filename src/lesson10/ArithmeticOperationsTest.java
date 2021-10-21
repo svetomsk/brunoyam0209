@@ -10,13 +10,13 @@ public class ArithmeticOperationsTest {
 
     @Test
     public void testDivisionByZero() {
-        Assertions.assertThrows(ArithmeticException.class,
-                new Executable() {
-                    @Override
-                    public void execute() throws Throwable {
-                        test.divide(1, 0);
-                    }
-                });
+        Executable method = new Executable() {
+            @Override
+            public void execute() throws Throwable {
+                test.divide(1, 0);
+            }
+        };
+        Assertions.assertThrows(ArithmeticException.class, method);
     }
 
     @Test

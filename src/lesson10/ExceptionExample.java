@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class ExceptionsExample {
+public class ExceptionExample {
 
     static class LocationNotFoundException extends RuntimeException {
         private String locationName;

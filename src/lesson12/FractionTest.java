@@ -2,6 +2,7 @@ package lesson12;
 
 import org.junit.jupiter.api.*;
 
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class FractionTest {
     @Test
     @Order(2)
@@ -20,5 +21,11 @@ public class FractionTest {
         Fraction actual = first.plus(second);
         Fraction expected = new Fraction(11, 10);
         Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    @Order(0)
+    public void test() {
+
     }
 }
